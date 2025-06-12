@@ -1,0 +1,42 @@
+# Node.js (if using npm/yarn with k6 scripts)
+node_modules/
+package-lock.json
+yarn.lock
+
+# Build output (if using TypeScript or bundlers)
+dist/
+build/
+*.bundle.js
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Environment variables
+.env
+.env.*
+
+# IDE/editor-specific
+.vscode/
+.idea/
+*.sw?
+
+# Coverage or results output (optional, depends on custom scripts)
+coverage/
+results/
+test.json
+
+# K6 artifacts
+*.out
+*.bin
+
+# TypeScript (if using it with transpilation)
+*.tsbuildinfo
+
+# Temporary files
+*.tmp
+*.bak
