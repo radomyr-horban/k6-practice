@@ -1,6 +1,7 @@
 import http from "k6/http";
 import { check, sleep } from "k6";
 import exec from "k6/execution";
+import { randomIntBetween } from "https://jslib.k6.io/k6-utils/1.2.0/index.js";
 
 export const options = {
   vus: 5,
@@ -20,5 +21,5 @@ export default function () {
     "status is 200": (r) => r.status === 200,
     "page is home page": (r) => r.body.includes("QuickPizza Legacy")
   });
-  sleep(2);
+  sleep(randomIntBetween(1, 5));
 }

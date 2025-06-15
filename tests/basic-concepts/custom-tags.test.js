@@ -1,6 +1,7 @@
 import http from "k6/http";
 import { check, sleep } from "k6";
 import { Counter } from "k6/metrics";
+import { randomIntBetween } from "https://jslib.k6.io/k6-utils/1.2.0/index.js";
 
 export const options = {
   vus: 5,
@@ -49,5 +50,5 @@ export default function () {
     { page: "order" }
   );
 
-  sleep(1);
+  sleep(randomIntBetween(1, 5));
 }
