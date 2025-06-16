@@ -31,13 +31,25 @@ winget install k6 --source winget
 ### Local Run
 
 ```bash
-k6 run tests/groups.test.js
+k6 run tests/basic-concepts/groups.test.js
 ```
 
-### Local Run Verbose
+### Local Run with verbose logs
 
 ```bash
-k6 run tests/groups.test.js --summary-mode=full
+k6 run tests/basic-concepts/groups.test.js --summary-mode=full
+```
+
+### Export test results in `json` format
+
+```bash
+k6 run tests/basic-concepts/groups.test.js --summary-export=src/test-results/results.json
+```
+
+or more verbose results
+
+```bash
+k6 run tests/basic-concepts/groups.test.js --out json=src/test-results/full_results.json
 ```
 
 ### Cloud Run
@@ -51,7 +63,7 @@ k6 cloud tests/example-test.js
 ### Local Run and Export results to Grafana Cloud
 
 ```bash
-k6 run tests/groups.test.js -o cloud
+k6 run tests/basic-concepts/groups.test.js -o cloud
 ```
 
 ![Exported results on cloud](src/images/exported-results-on-cloud.png)

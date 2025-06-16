@@ -28,7 +28,7 @@ logs/
 # Coverage or results output (optional, depends on custom scripts)
 coverage/
 results/
-test.json
+test-results/
 
 # K6 artifacts
 *.out
