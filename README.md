@@ -40,6 +40,18 @@ k6 run tests/basic-concepts/groups.test.js
 k6 run tests/basic-concepts/groups.test.js --summary-mode=full
 ```
 
+### Run browser tests in headless mode (default)
+
+```bash
+k6 tests/basic-concepts/browser.test.js
+```
+
+### Run browser tests in headed mode
+
+```bash
+K6_BROWSER_HEADLESS=false k6 tests/basic-concepts/browser.test.js
+```
+
 ### Export test results in `json` format
 
 ```bash
@@ -58,7 +70,7 @@ k6 run tests/basic-concepts/groups.test.js --out json=src/test-results/full_resu
 k6 cloud tests/example-test.js
 ```
 
-![Cloud run results](src/images/cloud-run-results.png)
+![Cloud run results](src/readme-images/cloud-run-results.png)
 
 ### Local Run and Export results to Grafana Cloud
 
@@ -66,4 +78,4 @@ k6 cloud tests/example-test.js
 k6 run tests/basic-concepts/groups.test.js -o cloud
 ```
 
-![Exported results on cloud](src/images/exported-results-on-cloud.png)
+![Exported results on cloud](src/readme-images/exported-results-on-cloud.png)

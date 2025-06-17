@@ -33,6 +33,7 @@ test-results/
 # K6 artifacts
 *.out
 *.bin
+*/screenshots
 
 # TypeScript (if using it with transpilation)
 *.tsbuildinfo
