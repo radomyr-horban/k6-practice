@@ -41,3 +41,6 @@ test-results/
 # Temporary files
 *.tmp
 *.bak
+
+# SonarQube
+.scannerwork/
